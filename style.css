@@ -1,56 +1,84 @@
-body{
-    align-items: center;
-    font-family: "Ubuntu", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.b{
-    background-size: cover;
-    position: relative;
-    display: flex;
-    margin-top: -5px;
-    flex-direction: column;
-    width: 100%;
-    height: 400px;
-}
-
-.container{
-    height: 500px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 2;
-    background-color: white;
-    border-radius: 10px;
-    top: 30%;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 35%;
-    margin-right: 30%;
-}
-
-.ubuntu-bold {
-    font-family: "Ubuntu", sans-serif;
+.container-geral > h1{
+    font-family: "PT Serif", serif;
     font-weight: 700;
     font-style: normal;
 }
-h1{
-    font-size: 40px;
+
+.container-geral > p{
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
 }
-h4{
-    margin-bottom: 0;
+
+.container-geral{
+    padding: 10mm;
+    background-color: white;
+    margin-left: 290px;
+    margin-right: 290px;
+    border: 2px;
+    border-radius: 35px;
+    width: 600px;
+    height: 1450px;
+    margin: 90px auto;
 }
-.titulomenor{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+.container-infor{
+    background-color: #f5e8f2;
+    border-radius: 12px;
+    border: 2px;
+    height: 120px;
+    text-align: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 10mm;
 }
-.titulo{
-    display: flex;
-    flex-direction: row;
+
+.container-infor > h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#imagem{
-    margin-top: 17px;
-    width: 20px;
-    height: 20px;
+
+body{
+    background-color: #FFEAE3;
+}
+
+img {
+    border-radius: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul{
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ol{
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-geral > h2{
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #8a3e3e;
+}
+
+table{
+    width: 90%;
+    font-weight: 400;  
+}
+
+.A, .B, .C, .D{
+    color: #8a3e3e;
+    font-weight: 600;
+}
+
+td{
+    font-size: larger;
+    height: 27px;
 }
