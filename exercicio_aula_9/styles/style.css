@@ -1,0 +1,49 @@
+body {
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    background-color: #011d38;
+}
+
+#inicio{
+    background-color: #064daa69;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#servicos{
+    background-color: #bad2e5;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#equipe{
+    background-color:#bad2e5;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#equipe img{
+    height: 16vh;
+    width: 16vh;
+}
+
+#contato{
+    background-color: #bad2e5;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#faq{
+    background-color: #bad2e5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.card-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}

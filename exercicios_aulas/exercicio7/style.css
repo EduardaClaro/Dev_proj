@@ -1,0 +1,55 @@
+body {
+    padding-top: 70px; 
+}
+
+.navbar-brand {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    font-weight: 700;
+    height: 2.7em;
+}
+
+.carousel-item img {
+    object-fit: cover; 
+    height: 100vh; 
+    width: 100%;
+}
+
+.project-card {
+    transition: transform 0.3s; 
+}
+
+.project-card:hover {
+    transform: scale(1.05); 
+}
+
+.form-control, .form-select {
+    font-size: 1rem; 
+}
+
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 40vh; /* Altura menor em telas pequenas */
+    }
+}
+
+/* Imagens dos cards de projetos */
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+/* Garante que cards tenham altura uniforme */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
