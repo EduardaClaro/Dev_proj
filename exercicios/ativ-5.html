@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter Palavra</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #cdd5fd;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #6877fc;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Exercício 05:</h3>
+        <h1>Inverter Palavra</h1>
+        <input type="text" id="palavra" placeholder="Digite uma palavra">
+        <button onclick="PalavraInvertida()">Inverter</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function PalavraInvertida() {
+
+            let palavra = document.getElementById("palavra").value;
+            let PalavraInvertida = palavra.split("").reverse().join(""); // Inverte a palavra
+
+            document.getElementById("resultado").innerHTML = `Palavra invertida: ${PalavraInvertida}`;
+            document.getElementById("palavra").value = "";
+        }
+    </script>
+</body>
+</html>

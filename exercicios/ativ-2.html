@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar Tabuada</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #e9cdfd;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #e895ff;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+    
+<body>
+    <h3>Exercício 02:</h3>
+    <h1>Mostrar Tabuada</h1>
+    <input type="number" id="numero" placeholder="Mencione um número" />
+    
+    <button onclick="verificar()">Consultar</button>
+    
+    <div id="resultado"></div>
+    
+    <script>
+        function verificar() {
+            const numero = parseFloat(document.getElementById("numero").value);
+            const resultado = document.getElementById("resultado");
+
+            if (!isNaN(numero)) {
+                resultado.innerHTML = `<h4>Tabuada do ${numero}:</h4>`;
+                for (let i = 1; i <= 10; i++) {
+                    resultado.innerHTML += `${numero} x ${i} = ${numero * i}<br>`;
+                }
+            } else {
+                resultado.innerHTML = "Esse número é inválido. Tente novamente!";
+            }
+        }
+    </script>
+</body>
+</html>

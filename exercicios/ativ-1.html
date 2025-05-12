@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular a média das notas</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #ccfaf1;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #8ffef7;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+    
+<body>
+    <h3>Exercício 01:</h3>
+    <h1>Calcular a Média de Três Notas</h1>
+    <div>
+        <input type="number" id="nota1" placeholder="Digite a primeira nota" />
+    </div>
+    <div>
+        <input type="number" id="nota2" placeholder="Digite a segunda nota" />
+    </div>
+    <div>
+        <input type="number" id="nota3" placeholder="Digite a terceira nota" />
+    </div>
+    
+    <button onclick="verificar()">Calcular Média</button>
+    
+    <div id="resultado"></div>
+    
+    <script>
+        function verificar() {
+        const nota1 = parseFloat(document.getElementById("nota1").value);
+        const nota2 = parseFloat(document.getElementById("nota2").value);
+        const nota3 = parseFloat(document.getElementById("nota3").value);
+        const media = (nota1 + nota2 + nota3) / 3;
+        const resultado = document.getElementById("resultado");
+
+        if (isNaN(nota1, nota2, nota3)) {
+            resultado.textContent = "Por favor, digite números válidos.";
+            return;
+        }
+
+        if (media >= 6) {
+            resultado.textContent = `A média é igual ${media.toFixed(2)} Parabéns, aprovado!`;
+        } else {
+            resultado.textContent = `A média é igual ${media.toFixed(2)} Até a proxima, reprovado!`;
+        }
+        }
+    </script>
+</body>
+</html>

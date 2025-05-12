@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contar até 100</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #fdcde3;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #ff7ecb;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+    
+<body>
+    <h3>Exercício 03:</h3>
+    <h1>Contar até 100</h1>
+    <input type="number" id="numero" placeholder="Mencione um número" />
+    
+    <button onclick="verificar()">Consultar</button>
+    
+    <div id="resultado"></div>
+    
+    <script>
+        function verificar() {
+            const numero = parseInt(document.getElementById("numero").value);
+            const resultado = document.getElementById("resultado");
+            resultado.innerHTML = "";
+
+            const limite = (!isNaN(numero) && numero > 0) ? numero : 100;
+
+            if (!isNaN(numero) && numero <= 100) {
+                for (let i = numero; i <= 100; i++) {
+                    resultado.innerHTML += i + "<br>";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

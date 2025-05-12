@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #fdcdcd;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #fc6868;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Exercício 07:</h3>
+        <h1>Números Primos</h1>
+        <input type="text" id="numero" placeholder="Digite um número">
+        <button onclick="numeroPrimo()">Verificar</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function numeroPrimo() {
+            let input = document.getElementById("numero").value;
+            let numero = parseInt(input);
+            let resultado = document.getElementById("resultado");
+
+            if (isNaN(numero) || input.trim() === "") {  // Verifica se a entrada é válida
+                resultado.innerHTML = "Por favor, digite um número válido.";
+                return;
+            }
+
+            if (numero <= 1) {  // Verifica se o número é primo
+                resultado.innerHTML = `${numero} não é primo.`;
+                return;
+            }
+
+            let isPrimo = true;
+            for (let i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i === 0) {
+                    isPrimo = false;
+                    break;
+                }
+            }
+
+            resultado.innerHTML = isPrimo ? `${numero} é primo!` : `${numero} não é primo.`;
+        }
+    </script>
+</body>
+</html>

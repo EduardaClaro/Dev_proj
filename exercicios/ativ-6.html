@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #cdfde6;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #68fcb4;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Exercício 06:</h3>
+        <h1>Lista de números</h1>
+        <input type="text" id="numeros" placeholder="Digite uma lista de números (ex: 1, 2, 3)">
+        <button onclick="encontrarMaior()">Mostrar</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function encontrarMaior() {
+
+            let input = document.getElementById("numeros").value;
+            
+            let lista = input.split(/[\s,]+/).filter(num => num !== '');
+            
+            let numeros = lista.map(num => Number(num));
+            
+            if (numeros.length === 0 || numeros.some(isNaN)) {
+                document.getElementById("resultado").innerText = "Por favor, insira uma lista válida.";
+                return;
+            }
+            
+            let maior = Math.max(...numeros);
+            
+            document.getElementById("resultado").innerText = `O maior número é: ${maior}`;
+        }
+    </script>
+</body>
+</html>

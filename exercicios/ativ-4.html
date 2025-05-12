@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar Números até 0</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 150px;
+            background-color: #cdfdd4;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        input, button {
+            padding: 15px 30px;
+            font-size: large;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        button {
+            background: #7eff98;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: x-large;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h3>Exercício 04:</h3>
+        <h1>Somar Números</h1>
+        <input type="number" id="numero" placeholder="Digite um número (0 para parar)">
+        <button onclick="adicionarNumero()">Adicionar</button>
+        <div id="resultado"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Para o sistema para de calcular, é preciso digitar o número 0.</p>
+    </div>
+
+    <script>
+        let soma = 0; 
+
+        function adicionarNumero() { 
+
+            let numero = Number(document.getElementById("numero").value); 
+            let resultado = document.getElementById("resultado");
+
+            if (numero === 0) { 
+                resultado.innerHTML = `A soma total é: ${soma}`;
+                soma = 0; 
+            } else { 
+                soma += numero;
+                resultado.innerHTML = `Soma atual: ${soma}`;
+            }
+        }
+    </script>
+</body>
+</html>
