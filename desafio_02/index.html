@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio 02 - Verificador de Senha Segura</title>
+</head>
+<body>
+    
+    <header class="container-geral">
+        <h1>Verificador de Senha Segura</h1>
+        <div class="container">
+            <form id="passwordForm" onsubmit="return false;">
+                <input type="password" id="passwordInput" placeholder="Digite sua senha" required>
+                <button type="submit">Verificar Segurança</button>
+                <br>
+                <br>
+                <br>
+            </form>
+            <div id="result"></div>
+        </div>
+
+        <div class="container-informacao">
+            <h2>Informações sobre Senhas</h2>
+            <ul>
+                <li>💡Um número</li>
+                <li>💡Uma letra minúscula</li>
+                <li>💡Uma letra maiúscula</li>
+                <li>💡Pelo menos 8 caracteres</li>
+                <li>💡Um caractere especial (ex: @, #, $, etc.)</li>
+            </ul>
+            <p>🔹Evite usar informações pessoais como nome, data de nascimento, etc.</p>
+        </div>
+    </header>
+    
+    <script src="script.js"></script>
+</body>
+</html>
