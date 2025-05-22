@@ -1,0 +1,39 @@
+body {
+    background-color: #b190c4;
+}
+
+h1 {
+    color: #1d002e;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+.pokemon-table th, .pokemon-table td {
+    border: 3px solid #220236;
+    text-align: center;
+}
+
+.pokemon-table th {
+    background-color: #cf99ff;
+    color: #210135;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pokemon-table td {
+    background-color: #dac5fd;
+    color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pokemon-img {
+    width: 112px;
+    height: 112px;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 50px;
+}
