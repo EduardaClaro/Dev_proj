@@ -1,19 +1,23 @@
-body {
-    background-color: #162f48;
-}
-
-.navbar {
-    background-color: #011d38;
-}
-
 h1{
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    font-family:'Times New Roman', Times, serif;
     text-align: center;
+    font-size: 2.5em;
 }
 
-.loading{
-    color: #878789;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
+p{
+    color: #7c523f;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    margin: 20px;
 }
+
+.card{
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.navbar{
+    background-color: #a99d98;
+}
+
